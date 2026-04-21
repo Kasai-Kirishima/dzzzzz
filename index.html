@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лабораторна №8 Bootstrap</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container d-flex justify-content-between">
+    <span class="fw-bold text-white">Bootstrap Lab</span>
+    <button id="menuBtn">☰</button>
+  </div>
+  <div id="menu" class="menu">
+    <a href="#home">Головна</a>
+    <a href="#layout">Колонки</a>
+    <a href="#form">Форма</a>
+  </div>
+</nav>
+
+<header class="container py-5" id="home">
+  <h1 class="display-5 fw-bold">Лабораторна робота №8</h1>
+  <p class="lead">Адаптивна сторінка з Bootstrap компонентами</p>
+</header>
+
+<main class="container" id="layout">
+  <div class="row">
+    <div class="col-lg-4 card p-3">
+      <h2>Ліва колонка</h2>
+      <button id="dropBtn" class="btn btn-success">Dropdown</button>
+      <div id="dropdown" class="dropdown">
+        <div>Пункт 1</div>
+        <div>Пункт 2</div>
+      </div>
+    </div>
+
+    <div class="col-lg-8 card p-3">
+      <h2>Контент</h2>
+      <p>Адаптивна центральна частина</p>
+      <button class="btn btn-primary">Кнопка</button>
+      <button class="btn btn-outline">Друга кнопка</button>
+    </div>
+  </div>
+
+  <section class="card p-3 mt-5" id="form">
+    <h2>Форма</h2>
+    <input class="form-control" placeholder="Ім'я">
+    <input class="form-control" placeholder="Email">
+    <textarea class="form-control" placeholder="Повідомлення"></textarea>
+    <button class="btn btn-primary">Відправити</button>
+  </section>
+</main>
+
+<footer class="bg-dark text-white text-center py-4 mt-5">
+  © 2026 Bootstrap Lab
+</footer>
+
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

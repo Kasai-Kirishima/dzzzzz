@@ -1,0 +1,42 @@
+:root{
+  --bg:#081017;
+  --panel:#101922ee;
+  --panel2:#0f1823d8;
+  --text:#f3f7ff;
+  --muted:#9cb0c6;
+  --accent:#8de0c7;
+  --accent2:#ffd56a;
+  --danger:#ff6b6b;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:radial-gradient(circle at 50% 0%, #19263b 0%, #081017 60%, #04080d 100%);font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text)}
+#game{display:block;width:100vw;height:100vh}
+#hud{position:fixed;inset:0;pointer-events:none}
+#topbar{position:absolute;left:18px;top:16px;text-shadow:0 2px 8px rgba(0,0,0,.45)}
+#missionTitle{font-size:26px;font-weight:800;letter-spacing:.04em}
+#missionSubtitle{font-size:14px;color:var(--muted);margin-top:2px}
+#stats{position:absolute;right:18px;top:14px;display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;max-width:55vw}
+.stat{min-width:96px;padding:10px 12px;background:linear-gradient(180deg, rgba(16,25,34,.92), rgba(10,16,23,.86));border:1px solid rgba(255,255,255,.08);border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.25);text-align:center}
+.stat span{display:block;font-size:11px;letter-spacing:.18em;color:#87a3bb;margin-bottom:2px}
+.stat b{font-size:16px}
+#hint{position:absolute;left:50%;bottom:15px;transform:translateX(-50%);padding:10px 14px;border-radius:999px;background:rgba(8,14,20,.72);color:#d7e4f1;font-size:12px;border:1px solid rgba(255,255,255,.07);backdrop-filter:blur(6px)}
+#crosshair{position:absolute;left:50%;top:50%;width:18px;height:18px;transform:translate(-50%,-50%);opacity:.9}
+#crosshair::before,#crosshair::after{content:"";position:absolute;left:50%;top:50%;background:var(--accent);box-shadow:0 0 12px rgba(141,224,199,.45)}
+#crosshair::before{width:18px;height:2px;transform:translate(-50%,-50%)}
+#crosshair::after{width:2px;height:18px;transform:translate(-50%,-50%)}
+#minimap{position:absolute;left:16px;bottom:16px;width:220px;height:220px;background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.1);border-radius:14px;overflow:hidden}
+#minimap.hidden{display:none}
+#message{position:absolute;left:50%;top:86px;transform:translateX(-50%);padding:12px 18px;border-radius:14px;background:rgba(16,25,34,.88);border:1px solid rgba(255,255,255,.08);color:var(--text);font-weight:700;opacity:0;transition:opacity .25s ease;max-width:min(90vw,780px);text-align:center}
+#message.show{opacity:1}
+#menu{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:10;background:radial-gradient(circle at 50% 20%, rgba(21,34,52,.80), rgba(5,8,12,.92));backdrop-filter:blur(8px)}
+.card{width:min(920px,92vw);padding:24px 24px 20px;border-radius:26px;background:linear-gradient(180deg, rgba(19,29,42,.92), rgba(8,14,20,.94));border:1px solid rgba(255,255,255,.1);box-shadow:0 20px 80px rgba(0,0,0,.45)}
+h1{margin:0 0 10px;font-size:44px;letter-spacing:.02em}
+p{margin:0 0 18px;color:var(--muted);line-height:1.5}
+.sectionLabel{margin:16px 0 10px;color:#cfe0f1;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+.buttonRow{display:flex;flex-wrap:wrap;gap:10px}
+button{pointer-events:auto;border:none;cursor:pointer;border-radius:14px;padding:12px 14px;background:#182535;color:var(--text);font-weight:700;transition:transform .12s ease, background .12s ease, box-shadow .12s ease}
+button:hover{transform:translateY(-1px);background:#223449;box-shadow:0 10px 25px rgba(0,0,0,.2)}
+button.active{background:linear-gradient(180deg, #2f6b5c, #21453f);box-shadow:0 0 0 1px rgba(141,224,199,.35) inset}
+button.start{margin-top:10px;padding:14px 20px;background:linear-gradient(180deg, #7dd3ff, #4ea6d7);color:#031018}
+.note{margin-top:12px;color:#8ea3b8;font-size:12px}
+.small{font-size:12px;color:#94a8bd}

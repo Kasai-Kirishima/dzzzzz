@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TBC: Frontline</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="hud">
+    <div id="topbar">
+      <div id="missionTitle">TBC: Frontline</div>
+      <div id="missionSubtitle">Выберите класс и миссию</div>
+    </div>
+    <div id="stats">
+      <div class="stat"><span>HP</span><b id="hp">100</b></div>
+      <div class="stat"><span>AMMO</span><b id="ammo">—</b></div>
+      <div class="stat"><span>CLASS</span><b id="className">—</b></div>
+      <div class="stat"><span>OBJECTIVE</span><b id="objectiveState">—</b></div>
+    </div>
+    <div id="hint">WASD — движение · Mouse — взгляд · Click — атака · E — взять/использовать · Q — способность · Shift — бег · Tab — карта</div>
+    <div id="crosshair"></div>
+    <div id="minimap" class="hidden"></div>
+    <div id="message"></div>
+  </div>
+
+  <div id="menu">
+    <div class="card">
+      <h1>TBC: Frontline</h1>
+      <p>Первое лицо. Приемлемая 3D-графика. Вдохновлено Operation Bren, Stalevar и всей метой.</p>
+      <div class="sectionLabel">Миссия</div>
+      <div class="buttonRow" id="missionButtons"></div>
+      <div class="sectionLabel">Класс</div>
+      <div class="buttonRow" id="classButtons"></div>
+      <div class="buttonRow">
+        <button id="startBtn" class="start">Старт</button>
+      </div>
+      <div class="note">Откроется pointer lock. Если мышь не захватится — используй стрелки для поворота.</div>
+    </div>
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <script src="game.js"></script>
+</body>
+</html>
